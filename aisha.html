@@ -1,43 +1,160 @@
-<div id="pesan">
-    <p>
-        Hai Aisha ❤️
-        <br><br>
-        Aku tahu akhir-akhir ini aku banyak bikin kamu kecewa.
-        Aku tahu mungkin aku sudah membuat kamu sedih, marah, dan lelah menghadapi semua ini.
-        <br><br>
-        Aku nggak mau cari alasan.
-        Aku cuma mau minta maaf dengan tulus atas semua kesalahan yang sudah aku lakukan.
-        <br><br>
-        Sejujurnya, kehilangan senyum kamu adalah salah satu hal yang paling nggak aku suka.
-        Karena senyum itu selalu jadi alasan kenapa hariku terasa lebih baik.
-        <br><br>
-        🐱 Kamu tahu nggak?
-        <br><br>
-        Kamu itu mirip kucing kesayanganmu.
-        Kadang ngambek, kadang manja, kadang bikin gemas, tapi selalu berhasil bikin aku sayang terus setiap hari.
-        <br><br>
-        Aku sadar aku belum jadi orang yang sempurna.
-        Tapi aku ingin terus belajar jadi lebih baik, bukan untuk siapa-siapa, tapi untuk kita.
-        <br><br>
-        Terima kasih karena pernah hadir di hidup aku.
-        Terima kasih karena pernah membuat hari-hari aku terasa lebih berwarna.
-        <br><br>
-        Dan kalau hari ini kamu masih marah, nggak apa-apa.
-        Aku akan tetap menghargai perasaan kamu.
-        <br><br>
-        Tapi sebelum kamu menutup halaman ini, aku cuma mau bertanya satu hal...
-        <br><br>
-        🥺❤️
-        <br><br>
-        Bolehkah aku mendapatkan satu kesempatan lagi?
-        <br><br>
-        Bolehkah kita memperbaiki semuanya bersama?
-        <br><br>
-        Bolehkah aku memanggil kamu "sayang" lagi?
-        <br><br>
-        Karena sejujurnya...
-        aku masih ingin bersama kamu.
-        <br><br>
-        💖 Aisha, maukah kamu balikan sama aku? 💖
-    </p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Aisha 💜</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#8e44ad,#d7bde2);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+.card{
+background:white;
+width:90%;
+max-width:700px;
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,0.2);
+position:relative;
+z-index:2;
+}
+
+h1{
+color:#8e44ad;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+color:#444;
+}
+
+button{
+background:#8e44ad;
+color:white;
+border:none;
+padding:15px 30px;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.flower{
+font-size:30px;
+position:fixed;
+animation:fall 8s linear infinite;
+}
+
+.heart{
+font-size:22px;
+position:fixed;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Untuk Aisha 💜</h1>
+
+<p>
+Hai sayang...
+</p>
+
+<p>
+Aku tahu aku banyak salah. Aku tahu mungkin aku bikin kamu kecewa, sedih, bahkan marah.
+</p>
+
+<p>
+Aku nggak datang buat cari alasan. Aku cuma datang buat minta maaf dan ngaku kalau aku benar-benar nyesel.
+</p>
+
+<p>
+Sejujurnya, sampai sekarang aku masih sayang sama kamu. Masih peduli sama kamu. Dan masih berharap bisa bikin semuanya baik-baik lagi.
+</p>
+
+<p>
+Kalau kamu tanya apa yang paling aku inginkan saat ini, jawabannya sederhana...
+</p>
+
+<p>
+Aku cuma pengen bisa ngobrol lagi sama kamu, ketawa lagi sama kamu, dan jalan lagi sama kamu.
+</p>
+
+<p>
+Karena buat aku, Aisha bukan cuma seseorang yang pernah hadir.
+Aisha adalah seseorang yang masih ingin aku perjuangkan setiap hari. 💜
+</p>
+
+<button onclick="lanjut()">
+Klik Aku 💜
+</button>
+
 </div>
+
+<script>
+
+function lanjut(){
+alert("Aisha 💜\n\nAku sayang kamu.\nAku tahu aku banyak salah.\nTapi kalau masih ada sedikit ruang di hati kamu...\n\nMau ya lanjut sama aku sayang? 🥺💜");
+}
+
+function buatBunga(){
+let bunga=document.createElement('div');
+bunga.className='flower';
+bunga.innerHTML='🌸';
+bunga.style.left=Math.random()*100+'vw';
+document.body.appendChild(bunga);
+
+setTimeout(function(){
+bunga.remove();
+},8000);
+}
+
+function buatHati(){
+let hati=document.createElement('div');
+hati.className='heart';
+hati.innerHTML='💜';
+hati.style.left=Math.random()*100+'vw';
+document.body.appendChild(hati);
+
+setTimeout(function(){
+hati.remove();
+},6000);
+}
+
+setInterval(buatBunga,700);
+setInterval(buatHati,400);
+
+</script>
+
+</body>
+</html>
